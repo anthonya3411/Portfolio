@@ -1,0 +1,207 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+body
+{
+    text-align: left;
+    display: inline;
+    background-image: linear-gradient(-45deg, #444444 40%, #333333 70%,#222222 100%);
+    
+}
+
+#homePage
+{
+    
+}
+
+#aboutHeader
+{
+    margin-left: 15%;
+    margin-top: 50px;
+    max-width: 33%;
+    float: left;
+}
+
+
+
+
+#aboutHeader img
+{
+    float: right;
+}
+
+#aboutHeader h1
+{
+    letter-spacing: .1em;
+    font-family: 'Bebas Neue', cursive;
+    color: #ffffff;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0px 50px 0px;
+    font-weight: bold;
+}
+
+#aboutHeader p
+{
+    font-family: 'Karla', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 5%;
+    padding:  0px 50px 0px;
+    font-weight: bold;
+}
+
+#quickLinks
+{
+    margin-top: 50px;
+    max-width: 33%;
+    float: left;
+}
+
+#quickLinks h1
+{
+    letter-spacing: .1em;
+    font-family: 'Bebas Neue', cursive;
+    color: #ffffff;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0px 50px 0px;
+    font-weight: bold;
+}
+
+#quickLinks p
+{
+    
+    font-family: 'Karla', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 5%;
+    padding:  0px 50px 0px;
+    font-weight: bold;
+}
+
+#quickLinks a
+{
+    margin-left: 5%;
+    font-family: 'Karla', sans-serif;
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 30px;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: gray;
+}
+
+#projectHeader
+{
+    margin-top: 15px;
+    text-align: center;
+    letter-spacing: .1em;
+    font-family: 'Bebas Neue', cursive;
+    color: #ffffff;
+    font-size: 35px;
+    line-height: 80px;
+    font-weight: bold;
+}
+
+
+#projectsContainer
+{
+    width: 75%;
+    margin: auto;
+    align-items: center;
+}
+
+#projectsContainer img
+{
+    max-width: 33%; 
+    margin-top: 5%;
+}
+
+
+
+
+nav
+{
+    letter-spacing: .1em;
+    background-color: black;
+    letter-spacing: .1em;
+    font-family: 'Bebas Neue', cursive;
+    height: 80px;
+    width: 100%;
+}
+
+nav label{
+
+    color: white;
+    font-size: 46px;
+    line-height: 80px;
+    padding: 0px 35px;
+    font-weight: bold;
+    margin-left: 15%;
+}
+nav a img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    margin-top: 15px;
+    overflow: hidden;
+    float: right;
+}
+
+nav ul{
+    float: right;
+    margin-right: 15%;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+#hoverItem a
+{
+    border-radius: 3px; 
+    max-height: fit-content;
+}
+
+#bar a{
+    text-decoration: none;
+    padding: 7px, 13px;
+}
+
+#hoverItem a.active,#hoverItem a:hover{
+    background: gray;
+    transition:  .5s;
+}
+
+#quickLinks a
+{
+    border-radius: 3px; 
+    max-height: fit-content;
+}
+
+
+
+#quickLinks a.active,#quickLinks a:hover{
+    background: black;
+    transition:  .5s;
+}
