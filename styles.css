@@ -4,24 +4,176 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    
 }
-
 
 body
 {
+    
     text-align: left;
     display: inline;
-    background-image: linear-gradient(-45deg, #444444 40%, #333333 70%,#222222 100%);
+    background: linear-gradient(-45deg, #333333 70%,#222222 100%);
+    background-size: 400% 400%;
+    animation: animateBackground 4s infinite ease-in-out;
+    filter: drop-shadow(0 2px 16px black) contrast(110%);
+}
+
+nav
+{
+    
+    letter-spacing: .1em;
+    background-color: black;
+    letter-spacing: .1em;
+    font-family: 'Bebas Neue', cursive;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+    align-items: flex-start;
     
 }
 
-#homePage
+nav label
 {
+    color: white;
+    font-size: 46px;
+    line-height: 80px;
+    padding: 0px 35px;
+    font-weight: bold;
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap; 
+    margin-left: 15%;
+    max-width: fit-content;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .9s step-end infinite;
+
+}
+nav a img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    margin-top: 15px;
+    overflow: hidden;
+    float: right;
     
+}
+
+nav ul{
+    
+    float: right;
+    margin-left: 8%;
+}
+
+nav ul li
+{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a
+{
+    animation: fadeIn ease-out 1.8s;
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+
+}
+
+
+
+
+nav ul li a img{
+
+    transition: all .2s ease-in-out; 
+}
+
+nav ul li a img:hover{
+
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px gray) contrast(100%);
+}
+
+#hoverItem a
+{
+    border-radius: 3px; 
+    max-height: fit-content;
+}
+
+#hoverItem
+{
+    transition: all .2s ease-in-out; 
+}
+
+#hoverItem:hover
+{
+    transform: scale(1.1);
+    filter: drop-shadow(0 2px 10px white) contrast(110%);
+}
+
+
+#projectHeader
+{
+    animation: fadeIn ease-out 1.8s;
+    margin-top: 5%;
+    text-align: center;
+    letter-spacing: .1em;
+    font-family: 'Bebas Neue', cursive;
+    color: #ffffff;
+    font-size: 35px;
+    line-height: 80px;
+    font-weight: bold;
+    
+}
+
+#projectsContainer
+{
+    animation: fadeIn ease-out 1.8s;
+    margin-top: 5%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+}
+
+#projectsContainer img
+{
+    transition: .7s ease-out;
+    max-width: 500px;
+    filter: brightness(75%);
+    border-radius: 5px;
+}
+
+#projectsContainer img + img
+{
+    margin-left: -20%;
+    
+}
+
+#projectsContainer img:hover
+{
+    filter: drop-shadow(0 2px 16px white) contrast(110%);
+}
+
+#projectsContainer img:hover ~ img
+{
+    z-index: 1;
+    translate: 270px;
+}
+
+#projectsContainer:hover img
+{
+    translate: -120px;
 }
 
 #aboutHeader
 {
+    animation: fadeIn ease-out 1.8s;
     margin-left: 15%;
     margin-top: 50px;
     max-width: 33%;
@@ -29,15 +181,9 @@ body
 }
 
 
-
-
-#aboutHeader img
-{
-    float: right;
-}
-
 #aboutHeader h1
 {
+    animation: fadeIn ease-out 1.8s;
     letter-spacing: .1em;
     font-family: 'Bebas Neue', cursive;
     color: #ffffff;
@@ -49,6 +195,7 @@ body
 
 #aboutHeader p
 {
+    animation: fadeIn ease-out 1.8s;
     font-family: 'Karla', sans-serif;
     color: #ffffff;
     font-size: 16px;
@@ -58,150 +205,66 @@ body
     font-weight: bold;
 }
 
-#quickLinks
+#imgContainer
 {
-    margin-top: 50px;
-    max-width: 33%;
-    float: left;
+    animation: fadeIn ease-out 1.8s;
 }
 
-#quickLinks h1
+
+@keyframes typing 
 {
-    letter-spacing: .1em;
-    font-family: 'Bebas Neue', cursive;
-    color: #ffffff;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0px 50px 0px;
-    font-weight: bold;
+    from 
+    { 
+        width: 0 
+    }
+    to 
+    { 
+        width: 100% 
+    }
 }
 
-#quickLinks p
+@keyframes blink-caret 
 {
-    
-    font-family: 'Karla', sans-serif;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 30px;
-    margin-left: 5%;
-    padding:  0px 50px 0px;
-    font-weight: bold;
+    from, to 
+    { 
+        border-color: transparent 
+    }
+    50% 
+    { 
+        border-color: white; 
+    }
 }
+  
 
-#quickLinks a
+
+@keyframes fadeIn 
 {
-    margin-left: 5%;
-    font-family: 'Karla', sans-serif;
-    color: #ffffff;
-    font-size: 28px;
-    line-height: 30px;
-    padding: 5px;
-    border-radius: 3px;
-    font-weight: bold;
-    background-color: gray;
+    0% 
+    {
+      opacity:0;
+    }
+    75%
+    {
+        opacity: 0;
+    }
+    100% 
+    {
+      opacity:1;
+    }
 }
 
-#projectHeader
+
+
+
+@keyframes animateBackground
 {
-    margin-top: 15px;
-    text-align: center;
-    letter-spacing: .1em;
-    font-family: 'Bebas Neue', cursive;
-    color: #ffffff;
-    font-size: 35px;
-    line-height: 80px;
-    font-weight: bold;
-}
-
-
-#projectsContainer
-{
-    width: 75%;
-    margin: auto;
-    align-items: center;
-}
-
-#projectsContainer img
-{
-    max-width: 33%; 
-    margin-top: 5%;
-}
-
-
-
-
-nav
-{
-    letter-spacing: .1em;
-    background-color: black;
-    letter-spacing: .1em;
-    font-family: 'Bebas Neue', cursive;
-    height: 80px;
-    width: 100%;
-}
-
-nav label{
-
-    color: white;
-    font-size: 46px;
-    line-height: 80px;
-    padding: 0px 35px;
-    font-weight: bold;
-    margin-left: 15%;
-}
-nav a img{
-    width: 50px;
-    height: 50px;
-    border-radius: 10%;
-    margin-top: 15px;
-    overflow: hidden;
-    float: right;
-}
-
-nav ul{
-    float: right;
-    margin-right: 15%;
-}
-
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-
-nav ul li a{
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-
-#hoverItem a
-{
-    border-radius: 3px; 
-    max-height: fit-content;
-}
-
-#bar a{
-    text-decoration: none;
-    padding: 7px, 13px;
-}
-
-#hoverItem a.active,#hoverItem a:hover{
-    background: gray;
-    transition:  .5s;
-}
-
-#quickLinks a
-{
-    border-radius: 3px; 
-    max-height: fit-content;
-}
-
-
-
-#quickLinks a.active,#quickLinks a:hover{
-    background: black;
-    transition:  .5s;
+    0%{
+        background-position:  0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 }
